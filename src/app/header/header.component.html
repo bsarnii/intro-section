@@ -1,0 +1,37 @@
+<img class="logo" src="assets/images/logo.svg" alt="header snap logo">
+<img (click)="toggleMenu()" class="hamburger" src="assets/images/icon-menu.svg" alt="hamburger menu">
+<div *ngIf="opened" class="menu">
+    <img (click)="toggleMenu()" class="close-menu" src="assets/images/icon-close-menu.svg" alt="close menu">
+    <ul class="options">
+        <li><div class="features"><span (click)="toggleFeatures()">Features</span> <img (click)="toggleFeatures()" src={{openFeaturesImg}}>
+            <div *ngIf="showFeatures" class="features-container">
+                <a class="todo-list">
+                    <img src="assets/images/icon-todo.svg" alt="to-do"> <p>Todo List</p>
+                </a>
+                <a class="calendar">
+                    <img src="assets/images/icon-calendar.svg" alt="calendar"> <p>Calendar</p>
+                </a>
+                <a class="reminders">
+                    <img src="assets/images/icon-reminders.svg" alt="reminders"> <p>Reminders</p>
+                </a>
+                <a class="planning">
+                    <img src="assets/images/icon-planning.svg" alt="planning"> <p>Planning</p>
+                </a>
+            </div>
+        </div></li>
+        <li><div class="company"><span (click)="toggleCompany()">Company</span><img (click)="toggleCompany()" src="{{openCompanyImg}}">
+            <div *ngIf="showCompany" class="company-container">
+                <a class="history">History</a>
+                <a class="our-team">Our Team</a>
+                <a class="blog">Blog</a>
+            </div>
+        </div></li>
+        <li><a class="careers">Careers</a></li>
+        <li><a class="about">About</a></li>
+    </ul>
+    <div class="login-register">
+        <button class="login">Login</button>
+        <button class="register">Register</button>
+    </div>
+</div>
+<div *ngIf="opened" (click)="toggleMenu()" class="toggle-background"></div>

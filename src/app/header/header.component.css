@@ -1,0 +1,130 @@
+:host{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.hamburger{
+    object-fit: contain;
+    cursor: pointer;
+}
+.menu{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 55%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: var(--white);
+    z-index: 10;
+}
+.close-menu{
+    align-self: flex-end;
+    cursor: pointer;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+    margin: 1.5rem 0;
+    cursor: pointer;
+}
+li:hover{
+    color: var(--black);
+}
+li >div:hover{
+    color: var(--black);
+}
+.options{
+    align-self: flex-start;
+}
+.features > img, .company > img{
+    margin-left: .5rem;
+}
+.login-register{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.login{
+    padding: 1rem 0;
+    color: var(--gray);
+    border:none;
+    background-color: transparent;
+    font-weight: 700;
+    cursor: pointer;
+}
+.login:hover{
+    color: var(--black);
+}
+.register {
+    padding: 1rem 0;
+    color: var(--gray);
+    border:2px solid var(--gray);
+    border-radius: 1rem;
+    background-color: transparent;
+    font-weight: 700;
+    cursor: pointer;
+}
+.register:hover{
+    color: var(--black);
+    border-color: var(--black);
+}
+
+div{
+    font-size: 18px;
+    color: var(--gray);
+}
+
+.toggle-background{
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*Features menu */
+.features-container{
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+.features-container > a {
+    padding: .5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.features-container > a:hover >p{
+    color: var(--black);
+
+}
+.features-container > a > img {
+    margin-right: 1rem;
+    width: 18px;
+}
+.features-container > a > p {
+    margin: 0;
+}
+
+/*Company menu */
+.company-container{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.company-container > a {
+    padding: .5rem;
+}
+
+.company-container > a:hover {
+    color: var(--black);
+}

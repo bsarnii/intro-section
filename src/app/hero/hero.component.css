@@ -1,0 +1,46 @@
+picture {
+    display: block;
+}
+picture > img {
+    width: 100%;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: .5rem;
+}
+h1{
+    color: var(--black);
+}
+p{
+    font-size: 17px;
+    margin-top: 0;
+    line-height: 2rem;
+}
+button{
+    font-size: 17px;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+button:hover{
+    background-color: transparent;
+    color: var(--black);
+    border: 1px solid var(--black);
+}
+.clients{
+    width: 100%;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.clients > img {
+    height: 1rem;
+}
