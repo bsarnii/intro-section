@@ -128,3 +128,21 @@ div{
 .company-container > a:hover {
     color: var(--black);
 }
+
+
+
+@media screen and (min-width: 600px) {
+    .hamburger{
+        display: none;
+    }
+    .toggle-background{
+        display: none;
+    }
+    .close-menu{
+        display: none;
+    }
+    .menu{
+        position: flex;
+        width: 100px;
+    }
+}
