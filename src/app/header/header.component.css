@@ -1,6 +1,6 @@
 :host{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 1rem;
 }
 .hamburger{
@@ -141,8 +141,47 @@ div{
     .close-menu{
         display: none;
     }
+    :host{
+        justify-content: flex-start;
+        gap: .5rem;
+    
+    }
     .menu{
-        position: flex;
-        width: 100px;
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    .menu > ul {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    li{
+        margin: 0;
+    }
+    .features, .company{
+        width:max-content;
+    }
+    .login-register{
+        flex-direction: row;
+    }
+    .login, .register {
+        padding: 1rem;
+    }
+}
+@media screen and (min-width: 1000px) {
+    :host{
+        gap: 3rem;
+    }
+    .logo{
+        margin-left: 2rem;
+    }
+    .menu{
+        gap: 45%;
     }
 }
