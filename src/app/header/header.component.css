@@ -3,6 +3,9 @@
     justify-content: space-between;
     padding: 1rem;
 }
+.logo{
+    object-fit: contain;
+}
 .hamburger{
     object-fit: contain;
     cursor: pointer;
@@ -13,7 +16,7 @@
     top: 0;
     bottom: 0;
     width: 55%;
-    background-color: white;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,4 +130,99 @@ div{
 
 .company-container > a:hover {
     color: var(--black);
+}
+
+
+
+@media screen and (min-width: 600px) {
+    :host{
+        background-color: var(--white);
+    }
+    .hamburger{
+        display: none;
+    }
+    .toggle-background{
+        display: none;
+    }
+    .close-menu{
+        display: none;
+    }
+    :host{
+        justify-content: flex-start;
+        gap: .5rem;
+    
+    }
+    .menu{
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+    .menu > ul {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    li{
+        margin: 0;
+        position: relative;
+    }
+    .features, .company{
+        width:max-content;
+    }
+    .features-container{
+        position: absolute;
+        right: 0;
+        background-color: white;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0px 2px 10px -6px black;
+    }
+    .company-container{
+        position: absolute;
+        right: 0;
+        background-color: white;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0px 2px 10px -6px black;
+    }
+    .login-register{
+        flex-direction: row;
+    }
+    .login, .register {
+        padding: 1rem;
+    }
+}
+@media screen and (min-width: 800px){
+    .menu{
+        gap: 30%;
+    }
+}
+@media screen and (min-width: 1000px) {
+    :host{
+        gap: 3rem;
+    }
+    .logo{
+        margin-left: 2rem;
+    }
+    .menu{
+        gap: 35%;
+    }
+    .menu > ul {
+        gap: 2.5rem;
+    }
+    .company-container{
+        width: max-content;
+    }
+}
+@media screen and (min-width: 1250px){
+    .menu{
+        gap: 67.5%;
+    }
 }

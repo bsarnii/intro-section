@@ -1,6 +1,6 @@
 <img class="logo" src="assets/images/logo.svg" alt="header snap logo">
 <img (click)="toggleMenu()" class="hamburger" src="assets/images/icon-menu.svg" alt="hamburger menu">
-<div *ngIf="opened" class="menu">
+<div [style.display]="opened ? 'flex' : 'none'" class="menu">
     <img (click)="toggleMenu()" class="close-menu" src="assets/images/icon-close-menu.svg" alt="close menu">
     <ul class="options">
         <li><div class="features"><span (click)="toggleFeatures()">Features</span> <img (click)="toggleFeatures()" src={{openFeaturesImg}}>
