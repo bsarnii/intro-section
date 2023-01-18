@@ -1,7 +1,10 @@
 :host{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 1rem;
+}
+.logo{
+    object-fit: contain;
 }
 .hamburger{
     object-fit: contain;
@@ -132,6 +135,7 @@ div{
 
 
 @media screen and (min-width: 600px) {
+    
     .hamburger{
         display: none;
     }
@@ -147,12 +151,14 @@ div{
     
     }
     .menu{
+        display: flex !important;
         position: static;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         margin: 0;
         padding: 0;
+        background-color: transparent;
     }
     .menu > ul {
         display: flex;
@@ -174,6 +180,11 @@ div{
         padding: 1rem;
     }
 }
+@media screen and (min-width: 800px){
+    .menu{
+        gap: 30%;
+    }
+}
 @media screen and (min-width: 1000px) {
     :host{
         gap: 3rem;
@@ -183,5 +194,10 @@ div{
     }
     .menu{
         gap: 45%;
+    }
+}
+@media screen and (min-width: 1250px){
+    .menu{
+        gap: 75%;
     }
 }

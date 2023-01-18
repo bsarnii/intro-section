@@ -13,7 +13,7 @@ export class HeaderComponent {
   showFeatures = false;
   showCompany = false;
 
-  screenWidth:any;
+  // screenWidth:any;
 
   toggleMenu(){
     this.opened = !this.opened;
@@ -35,9 +35,9 @@ export class HeaderComponent {
     this.showCompany = !this.showCompany
   }
   ngOnInit(){
-    this.screenWidth = window.innerWidth;
+    /*this.screenWidth = window.innerWidth;
     if (this.screenWidth >= 600) {
       this.opened = true;
-    }
+    }*/
   }
 }
